@@ -10,6 +10,6 @@ class tblinfocarts extends Authenticatable
 {
     protected $fillable = [
         'idproduct', 'idcart', 'mass',
-        'price', 'typeCategory'
+        'price', 'typeCategory', 'totalMoney'
     ];
 }

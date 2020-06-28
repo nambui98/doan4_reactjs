@@ -3657,7 +3657,7 @@ p {
 
 .prod-btns > div {
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     margin: 0;
     line-height: 1;
 }

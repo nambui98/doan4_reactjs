@@ -45,6 +45,14 @@ return [
             'driver' => 'passport',
             'provider' => 'tblcustomers',
         ],
+        'tbladmins-api' => [
+            'driver' => 'passport',
+            'provider' => 'tbladmins',
+        ],
+        'tbladmins' => [
+            'driver' => 'session',
+            'provider' => 'tbladmins',
+        ],
     ],
 
     /*
@@ -69,7 +77,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\tblcustomers::class,
         ],
-
+        'tbladmins' => [
+            'driver' => 'eloquent',
+            'model' => App\tbladmins::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -94,6 +105,12 @@ return [
     'passwords' => [
         'tblcustomers' => [
             'provider' => 'tblcustomers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'tbladmins' => [
+            'provider' => 'tbladmins',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

@@ -1,0 +1,398 @@
+/*============= css ant layout ==================*/
+/*.ant-layout.ant-layout-has-sider{
+    overflow: initial !important;
+}*/
+/*============= css ant layout ==================*/
+
+button {
+  outline: none !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-radius: "6px" !important;
+}
+.ant-upload-list-item {
+  float: left;
+  width: 148px;
+  margin-right: 8px;
+}
+.ant-upload-animate-enter {
+  animation-name: uploadAnimateInlineIn;
+}
+.ant-upload-animate-leave {
+  animation-name: uploadAnimateInlineOut;
+}
+.cancelType {
+  background-color: "#af1921" !important;
+  color: "#FFFFFF" !important;
+  border-radius: "6px" !important;
+}
+.okType {
+  background-color: "#2d3446" !important;
+  color: "#FFFFFF" !important;
+  border-radius: "6px" !important;
+}
+.editor :global(.public-DraftEditor-content) {
+  max-height: 500px !important;
+  overflow: auto;
+}
+.SelectStautusOptionStyle {
+  background: #000;
+  color: white !important;
+}
+.SelectStautusOptionStyle:hover {
+  background: white !important;
+  color: #000 !important;
+}
+.ant-select-dropdown-menu-item-selected {
+  background: white !important;
+  color: #000 !important;
+}
+.rdw-editor-main {
+  height: 500px !important;
+}
+.FormModal .ant-modal-content {
+  border-radius: 20px;
+}
+.FormModal .ant-modal-content .ant-modal-header {
+  border-radius: 20px 20px 0 0;
+  background: #2d3446;
+  border-bottom: 4px solid white;
+
+  padding: 13px 25px;
+}
+.FormModal .ant-modal-content .ant-modal-header .ant-modal-title {
+  color: white;
+  font-size: 14px;
+}
+.FormModal .ant-modal-close-x {
+  font-size: 0px;
+  position: relative;
+}
+.FormModal .ant-modal-close-x::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/close-square-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.FormModal .ant-modal-content .ant-modal-footer {
+  border-radius: 0 0 20px 20px;
+}
+.FormModal .FormData input,
+.FormModal .FormData textarea,
+.FormModal .FormData .ant-select-selection {
+  border-radius: 10px;
+}
+
+.ant-menu-item-group-title span {
+  position: relative;
+}
+
+.ant-menu-item-group-title span::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.65);
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  z-index: 1;
+  content: "";
+}
+
+.tspSidebar .ant-menu-submenu-inline .ant-menu-inline .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item a {
+  position: relative;
+}
+
+.tspSidebar
+  .ant-menu-submenu-inline
+  .ant-menu-inline
+  .ant-menu-item-group
+  .ant-menu-item-group-list
+  .ant-menu-item
+  a::before {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.65);
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  z-index: 1;
+  content: "";
+}
+.FormModal.OrderModal .ant-modal-content .ant-modal-body {
+  padding: 0;
+}
+.FormModal .LayoutWrapper .titleWrapper .inputSearch {
+  width: 320px !important;
+  border-radius: 10px;
+  height: 32px;
+}
+@media screen and (max-width: 767px) {
+  .FormModal .LayoutWrapper .titleWrapper .inputSearch {
+    width: 190px !important;
+  }
+}
+.FormModal .LayoutWrapper .titleWrapper .inputSearch:hover {
+  color: #2d3446;
+  border: 1px solid #2d3446;
+}
+.FormModal .LayoutWrapper .titleWrapper .inputSearch:focus {
+  color: #2d3446;
+  border: 1px solid #2d3446;
+  box-shadow: none;
+}
+.FormModal .LayoutWrapper .titleWrapper .btSearch {
+  display: inline-block;
+  border: 1px solid #2d3446;
+  color: white;
+  width: 32px;
+  height: 32px;
+  top: 2px;
+  position: relative;
+  background-color: #2d3446;
+  margin-left: 10px;
+}
+.FormModal .LayoutWrapper .titleWrapper {
+  padding: 10px 25px;
+  margin: 0;
+}
+.FormModal .LayoutWrapper .titleWrapper .btSearch > i {
+  margin-left: 0;
+  top: 2px !important;
+}
+.FormModal .LayoutWrapper .titleWrapper .btSearch:hover {
+  background-color: #3f3f3f;
+}
+.ant-menu-submenu-popup.NavSub:before {
+  top: 0;
+  opacity: 1;
+  background: #2d3446 !important;
+}
+.NavSub.ant-menu-submenu-placement-bottomLeft {
+  top: 118px !important;
+}
+@media screen and (max-width: 767px) {
+  .NavSub.ant-menu-submenu-placement-bottomLeft {
+    top: 127px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .ant-menu-light.NavSub {
+    top: 127px !important;
+  }
+}
+.NavSub .NavSubItem {
+  color: #fff;
+  border-bottom: 1px solid #2d3446;
+  background: #2d3446;
+  margin: 0 !important;
+}
+.NavSub .NavSubItem.ant-menu-item-active,
+.NavSub .NavSubItem.ant-menu-item-selected {
+  color: white;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+.w_50 {
+  width: 50%;
+  float: left;
+}
+
+.moveTop {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.OrderInputNumber {
+  width: 60px !important;
+}
+.OrderInputNumber input {
+  text-align: right;
+  padding-right: 25px;
+  background: #ebebeb;
+}
+.FormModal .SpinWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.FormModal .isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: currentColor;
+  pointer-events: none;
+}
+.FormModal .aSimple {
+  display: inline-block;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: #2d3446;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  margin-left: 5px !important;
+}
+.FormModal .aSimple i {
+  color: #fff;
+  font-size: 14px;
+}
+.FormModal .aSimple i.deleteRow {
+  font-size: 17px;
+  line-height: 0;
+  top: 2px;
+  position: relative;
+  color: #fff;
+}
+.FormModal .aSimple:hover {
+  background-color: #3f3f3f;
+}
+.FormModal .aSimple:hover i {
+  color: #fff;
+}
+.FormModal .aSimple:hover i.deleteRow {
+  color: #fff;
+}
+.FormModal .tableInnerModal .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.MyInputNumber input {
+  text-align: right;
+  padding-right: 25px;
+}
+
+.ant-popover-inner {
+  border: 1px solid white;
+}
+
+.ant-popover-buttons .ant-btn {
+  display: inline-block !important;
+  border: 2px solid white !important;
+  height: 32px !important;
+  color: white !important;
+  padding: 0 10px !important;
+  background-color: #2d3446 !important;
+  border-radius: 10px !important;
+}
+
+.ant-input-number-handler-wrap {
+  opacity: 1 !important;
+}
+
+.ant-input-number-handler-up {
+  background-color: #2d3446;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ant-input-number-handler-up i {
+  color: #fff;
+}
+
+.ant-input-number-handler-down {
+  background-color: #75c538;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ant-input-number-handler-down i {
+  color: #fff;
+}
+
+.ant-input-number-handler,
+.ant-input-number-handler-up:hover,
+.ant-input-number-handler-down:hover {
+  height: 70% !important;
+}
+
+.ant-input-number-handler-up,
+.ant-input-number-handler-down {
+  top: -25% !important;
+}
+*:fullscreen *:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+  overflow: auto !important;
+}
+
+.hidenMenu {
+  display: none !important;
+}
+.showMenu {
+  display: block !important;
+}
+
+.hidenMenuHeight {
+  margin-top: -70px !important;
+  height: auto !important;
+}
+
+.showMenuHeight {
+  margin-top: 0px !important;
+}
+
+.myDrawer .ant-drawer-content {
+  background-color: #2d3446 !important;
+}
+
+.myDrawer .ant-drawer-header {
+  border-radius: 0 !important;
+  background-color: #2d3446 !important;
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+.myDrawer .ant-drawer-title {
+  color: white !important;
+}
+
+.myDrawer .ant-menu {
+  background-color: #2d3446 !important;
+  color: white;
+}
+
+.myDrawer .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #000;
+}
+
+.myDrawer .ant-menu-item-selected,
+.myDrawer .ant-menu-item:hover {
+  color: white;
+}
+
+.myDrawer .ant-menu-vertical .ant-menu-item:after,
+.myDrawer .ant-menu-vertical-left .ant-menu-item:after,
+.myDrawer .ant-menu-vertical-right .ant-menu-item:after,
+.myDrawer .ant-menu-inline .ant-menu-item:after {
+  border-right: 3px solid white;
+}
+
+.myDrawer .ant-menu-inline,
+.myDrawer .ant-menu-vertical,
+.myDrawer .ant-menu-vertical-left {
+  border-right: none;
+}

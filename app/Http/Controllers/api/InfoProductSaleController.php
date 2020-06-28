@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\tblinfo_products_sale;
 use App\Http\Resources\Product as ProductResource;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class InfoProductSaleController extends Controller
 {
@@ -31,10 +35,33 @@ class InfoProductSaleController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $post = tblinfo_products_sale::create($data);
-
-        return response()->json($post, 200);
+        $validator =
+            Validator::make($request->all(), [
+                'idproduct_sale' => 'required',
+                'idsale' => 'required',
+                'idproduct' => 'required'
+            ]);
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors(), "success" => false], 200);
+        } else {
+            $check = tblinfo_products_sale::where('idproduct_sale', $request->idproduct_sale)->where('idproduct', $request->idproduct)->first();
+            if ($check) {
+                return response()->json(["error" => 'Sản phẩm đã được khuyến mãi', "success" => false], 200);
+            }
+            try {
+                $data = [
+                    "idproduct_sale" => $request->idproduct_sale,
+                    "idsale" => $request->idsale,
+                    "idproduct" => $request->idproduct,
+                    // "numbersale" => $request->numbersale,
+                    // "idadmin" => $idadmin
+                ];
+                $post = tblinfo_products_sale::create($data);
+                return response()->json(["data" => $post, "success" => true], 200);
+            } catch (QueryException  $ex) {
+                return   response()->json(["error" => $ex->getMessage(), "success" => false], 200);
+            }
+        }
     }
 
     /**

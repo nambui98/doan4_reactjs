@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use App\tblcarts;
 use Illuminate\Http\Request;
 use App\tblinfocarts;
-
+use App\tblproducts;
+use App\tblproducts_coppies;
 
 class InfoCartController extends Controller
 {
@@ -28,24 +29,30 @@ class InfoCartController extends Controller
      */
     public function store(Request $request)
     {
+        // dd("vao day");
+
         $request->validate([
             'idproduct' => 'required|integer',
             'idcart' => 'required|alpha_num',
             'mass' => 'required|alpha_num',
             'price' => 'required|alpha_num',
             'typeCategory' => 'required|integer',
-
+            // 'totalMoney' => 'requried|alpha_num'
         ]);
+
         $tblinfocart = new tblinfocarts([
             'idproduct' => $request->idproduct,
             'idcart' => $request->idcart,
             'mass' => $request->mass,
             'price' => $request->price,
+            'totalMoney' => $request->totalMoney,
             'typeCategory' => $request->typeCategory
         ]);
+        $product = tblproducts_coppies::where('idproduct', $request->idproduct);
+        $test = $product->update(['mass' => ($product->first()->mass) - ($request->mass)]);
         $tblinfocart->save();
         return response()->json([
-            // 'id' => $tblinfocart->id,
+            'test' => $test,
             "message" => "success",
             // 'message' => 'Successfully!'
         ], 200);
